@@ -9,7 +9,7 @@ COPY ./frontend/quasar.conf.js .
 RUN npm install
 COPY ./frontend/ .
 
-RUN npm quasar build -m pwa
+RUN quasar build -m pwa
 
 FROM nginx:stable as production-stage
 RUN mkdir /app
